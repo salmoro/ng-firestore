@@ -1,0 +1,42 @@
+{
+  "projectType": "library",
+  "root": "libs/ng-firestore",
+  "sourceRoot": "libs/ng-firestore/src",
+  "prefix": "ng-firestore",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:package",
+      "outputs": ["dist/libs/ng-firestore"],
+      "options": {
+        "project": "libs/ng-firestore/ng-package.json"
+      },
+      "configurations": {
+        "production": {
+          "tsConfig": "libs/ng-firestore/tsconfig.lib.prod.json"
+        },
+        "development": {
+          "tsConfig": "libs/ng-firestore/tsconfig.lib.json"
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ng-firestore"],
+      "options": {
+        "jestConfig": "libs/ng-firestore/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/ng-firestore/src/**/*.ts",
+          "libs/ng-firestore/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

@@ -1,0 +1,29 @@
+<form [formGroup]="form.ngForm" (ngSubmit)="save()">
+  <input
+    placeholder="First name"
+    [formControl]="$any(form.ngForm.get('firstName'))"
+  />
+  <input
+    placeholder="Last name"
+    [formControl]="$any(form.ngForm.get('lastName'))"
+  />
+  <input
+    placeholder="age"
+    [formControl]="$any(form.ngForm.get('age'))"
+    type="number"
+  />
+  <button>Save</button>
+</form>
+
+<ul>
+  <li *ngFor="let user of allUsers$ | async">
+    {{ user.firstName }} {{ user.lastName }},
+    {{ user.age }}
+    <button (click)="form.loadNewResource(user.id)">
+      EDIT
+    </button>
+    <button (click)="userResource.delete(user.id)">
+      DELETE
+    </button>
+  </li>
+</ul>

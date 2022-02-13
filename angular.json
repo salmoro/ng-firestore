@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "projects": {
+    "ng-firestore": "libs/ng-firestore",
+    "ng-firestore-demo": "apps/ng-firestore-demo",
+    "ng-firestore-demo-e2e": "apps/ng-firestore-demo-e2e"
+  }
+}

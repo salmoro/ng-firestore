@@ -1,0 +1,26 @@
+{
+  "name": "ng-firestore",
+  "version": "0.0.4",
+  "homepage": "https://github.com/salmoro/ng-firestore",
+  "keywords": [
+    "ng",
+    "library",
+    "angular",
+    "@angular/fire",
+    "firebase",
+    "firebaseui",
+    "firebase firestore",
+    "firebase database",
+    "firestore"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^13.2.0",
+    "@angular/core": "^13.2.0",
+    "@angular/forms": "^13.2.2",
+    "rxfire": "^6.0.3",
+    "firebase": "^9.6.6"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  }
+}
